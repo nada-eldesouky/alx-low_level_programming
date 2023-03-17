@@ -1,16 +1,18 @@
 #include <stdio.h>
-
 /**
- * main - main function
- *
- * Return: always 0
- */
+*main - main function
+*
+Return: Always 0 (Success)
+*/
 int main(void)
 {
-char i;
+	int n = '0';
 
-for (i = 0 ; i < 10 ; i++)
-putchar(i+ '0');
-putchar('\n');
-return (0);
+	while (n <= '9')
+	{
+		putchar(n);
+		n++;
+	}
+	putchar('\n');
+	return (0);
 }
