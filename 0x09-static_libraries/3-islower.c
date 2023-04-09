@@ -1,27 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
+#include "main.h"
 #include <stdio.h>
-/* betty style doc for function main goes there */
-/**
- * main - Entry Point
- *
- * Return: 0 (Success)
- */
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
+char c;
 
-int n; 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-/* your code goes there */
-if (n > 0)
-printf("%d is positive", n);
-else if (n == 0)
-printf("%d is zero", n);
-else
-printf("%d is negative", n);
-printf("\n");
+c = '0';
+printf("%c: %d\n", c, _isdigit(c));
+c = 'a';
+printf("%c: %d\n", c, _isdigit(c));
 return (0);
 }
