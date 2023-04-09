@@ -1,27 +1,16 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there */
+#include "main.h"
+
+
 /**
- * main - Entry Point
- *
- * Return: 0 (Success)
+ * _abs - computes the absolute value of an integer
+ * @n: the int to check
+ * Return: the absolute value of int
  */
-
-int main(void)
+int _abs(int n)
 {
-
-int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-/* your code goes there */
-if (n > 0)
-printf("%d is positive", n);
-else if (n == 0)
-printf("%d is zero", n);
-else
-printf("%d is negative", n);
-printf("\n");
-return (0);
+	if (n >= 0)
+	{
+		return (n);
+	}
+	return (-n);
 }

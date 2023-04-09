@@ -1,18 +1,28 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
+ * _atoi - convert a string into an integer.
  *
- * Return: Always 0.
+ * @s: the string to use.
+ *
+ * Return: integer.
  */
-int main(void)
+int _atoi(char *s)
 {
-char c;
+ 	int sign = 1, i = 0;
+ 	unsigned int res = 0;
 
-c = '0';
-printf("%c: %d\n", c, _isdigit(c));
-c = 'a';
-printf("%c: %d\n", c, _isdigit(c));
-return (0);
+
+ 	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
+ 	{
+ 		if (s[i] == '-')
+ 			sign *= -1;
+ 		i++;
+ 	}
+ 	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
+ 	{
+ 		res = (res * 10) + (s[i] - '0');
+ 		i++;
+ 	}
+ 	res *= sign;
+ 	return (res);
 }

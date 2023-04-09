@@ -1,27 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there */
+#include "main.h"
 /**
- * main - Entry Point
+ * _memset - fill a block of memory with a specific value
+ * @s: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to be changed
  *
- * Return: 0 (Success)
+ * Return: changed array with new value for n bytes
  */
-
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
 {
+	int i = 0;
 
-int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-/* your code goes there */
-if (n > 0)
-printf("%d is positive", n);
-else if (n == 0)
-printf("%d is zero", n);
-else
-printf("%d is negative", n);
-printf("\n");
-return (0);
+
+	for (; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
+	return (s);
 }

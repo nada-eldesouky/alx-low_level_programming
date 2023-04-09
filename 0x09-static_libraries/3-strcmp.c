@@ -1,18 +1,24 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
+ * _strcmp - compare string values
+ * @s1: input value
+ * @s2: input value
  *
- * Return: Always 0.
+ * Return: s1[i] - s2[i]
  */
-int main(void)
+int _strcmp(char *s1, char *s2)
 {
-char c;
+	int i;
 
-c = '0';
-printf("%c: %d\n", c, _isdigit(c));
-c = 'a';
-printf("%c: %d\n", c, _isdigit(c));
-return (0);
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+	i++;
+	}
+	return (0);
 }

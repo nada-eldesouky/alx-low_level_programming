@@ -1,18 +1,10 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ * Return: 1 if c is lowercase, 0 otherwise
  */
-int main(void)
+int _islower(int c)
 {
-char c;
-
-c = '0';
-printf("%c: %d\n", c, _isdigit(c));
-c = 'a';
-printf("%c: %d\n", c, _isdigit(c));
-return (0);
+	return (c >= 'a' && c <= 'z');
 }

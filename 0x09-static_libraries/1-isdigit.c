@@ -1,27 +1,11 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-#include <stdio.h>
-/* betty style doc for function main goes there */
+#include "main.h"
+		
 /**
- * main - Entry Point
- *
- * Return: 0 (Success)
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: int to be checked
+ * Return: 1 if c is a digit, 0 otherwise
  */
-
-int main(void)
+int _isdigit(int c)
 {
-
-int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-/* your code goes there */
-if (n > 0)
-printf("%d is positive", n);
-else if (n == 0)
-printf("%d is zero", n);
-else
-printf("%d is negative", n);
-printf("\n");
-return (0);
+	return (c >= '0' && c <= '9');
 }
