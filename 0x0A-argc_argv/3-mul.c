@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * main - print the number of arguments passed to the program
  * @argc: number of arguments
@@ -9,16 +10,14 @@
 */
 int main(int argc, char *argv[])
 {
-int sum;
+int a, b;
 if (argc == 3)
 {
-sum = atoi(argv[1] * atoi(argv[2]);
-printf("%d\n", sum);
+a = atoi(argv[1]);
+b = atoi(argv[2]);
+printf("%d\n", a *b);
+return (0);
 }
-else
-{
 printf("Error\n");
 return (1);
-}
-return (0);
 }
