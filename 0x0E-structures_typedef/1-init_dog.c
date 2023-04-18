@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "dog.h"
 /**
 * init_dog - initializes a variable of type struct dog
@@ -14,5 +13,4 @@ if (d)
 d->name = name;
 d->age = age;
 d->owner = owner;
-}
 }
