@@ -8,13 +8,10 @@
 * @owner: owner to initialize
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
-{ struct dog
-char name;
-float age;
-char owner;
-} s = ("Poppy", 3.5, "Bob");
-
-void main:(void)
 {
-struct dog s = {"Poppy", 3.5, "Bob"};
+if (d)
+{
+d->name = name;
+d->age = age;
+d->owner = owner;
 }
